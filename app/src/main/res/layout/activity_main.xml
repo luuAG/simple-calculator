@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Vertical linear layout - mỗi item là một dòng ở trong màn hình (kêt cả dòng kết quả)Dương Văn Nam - 03:34 PM 16/03/2022 -->
+
+<!-- Giải thích thuộc tính:layout_width: match_parent => Chiều dài bằng chiều dài của chalayout_height: match_parent => Chiều cao bằng chiều cao của chabackground: màu nềnorientation: set hướng cho linear layout là ngang hay dọclayout_weight: set chiều dài (hoặc rộng) theo tỉ lệ cho item trong linear layoutmarginStart, marginEnd, marginTop, marginBottom: lề trái phải trên dướifontFamily: set font chữ text: văn bản trong componenttextAlignment: căn lề văn bản theo chiều nganggravity: căn lề văn bản (hoặc các component bên trong) của 1 component theo chiều dọctextColor: màu chữ textSize: kích thước văn bảntools:ignore="RtlCompat": Bỏ qua cảnh báo khi dùng cả textAlignment và gravitytextAllCaps: ghi hoa cả văn bản hay không Dương Văn Nam - 04:28 PM 16/03/2022 -->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Result screen Dương Văn Nam - 03:35 PM 16/03/2022 -->
+
+
+    <TextView
+        android:id="@+id/screen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1.125"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center_vertical"
+        android:textAlignment="textEnd"
+        android:textColor="@color/number_background"
+        android:textSize="50sp"
+        tools:ignore="RtlCompat"/>
+
+    <!-- Rows of keyboard - Each row is a horizontal linear layout Nguyễn Quang Vinh - 03:45 PM 16/03/2022 -->
+
+
+    <!-- First row (789÷) -->
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- To equally divided each button - using layout weight as size ratio of buttons.Same for second and third rowsNguyễn Quang Vinh - 03:48 PM 16/03/2022 -->
+
+
+        <!-- All buttons are the same sizeNguyễn Quang Vinh - 03:48 PM 16/03/2022 -->
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="7"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="8"
+            android:textAllCaps="false"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="9"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDivide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/operator_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="÷"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <!-- Second row (456x) -->
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="4"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="5"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="6"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMultiply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/operator_background"
+            android:fontFamily="sans-serif-thin"
+            android:paddingBottom="15dp"
+            android:text="×"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <!-- Third row (123-) -->
+
+
+    -
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="1"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="2"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="3"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubtract"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/operator_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="–"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <!-- Fourth row (0.+) -->
+
+
+    -
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Zero number button takes 2/4 ratio, each other buttons take 1/4 ratioNguyễn Quang Vinh - 03:54 PM 16/03/2022 -->
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_weight="2"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="0"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/number_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="."
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPlus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/operator_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="+"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <!-- Final row (C=) -->
+
+
+    -
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/operator_background"
+            android:fontFamily="sans-serif-thin"
+            android:padding="0dp"
+            android:text="C"
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnResult"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/operator_background"
+            android:fontFamily="sans-serif-thin"
+            android:text="="
+            android:textColor="@color/number_color"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
